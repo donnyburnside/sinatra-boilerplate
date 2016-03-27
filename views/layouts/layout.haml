@@ -1,0 +1,27 @@
+!!!
+%html{:lang => "en", :itemscope => "itemscope", :itemtype => "http://schema.org/WebApplication"}
+
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:"http-equiv" => "x-ua-compatible", :content => "ie=edge"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"}
+    %title= app_title
+    %link{:href => "/css/style.css", :rel => "stylesheet"}
+    %meta{:name => "description", :content => ""}
+
+  %body{:class => ""}
+
+    %div{:class => "site-wrapper"}
+
+      %header{:class => "site-header"}
+        = render_partial :"component/branding"
+        = render_partial :"menu/primary-menu"
+
+      %main{:class => "site-body"}
+
+        %div{:class => "site-content"}
+          = yield
+
+      %footer{:class => "site-footer"}
+
+    = render_partial :"scripts"

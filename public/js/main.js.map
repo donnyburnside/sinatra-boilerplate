@@ -1,0 +1,1 @@
+{"version":3,"sources":["hello-world.js"],"names":["console","log"],"mappings":"AAOAA,QAAAC,IAAA","file":"main.js","sourcesContent":["/*\n  Name:        hello-world.js\n  Description: A simple Hello World example\n  Version:     0.0.1\n  Author:      Donny Burnside (http://www.donnyburnside.com)\n*/\n\nconsole.log('Hello World!')\n"],"sourceRoot":"/source/"}
