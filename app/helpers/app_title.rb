@@ -2,6 +2,6 @@
 
 helpers do
   def app_title
-    "App Title"
+    "Sinatra Seed"
   end
 end
