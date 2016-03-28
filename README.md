@@ -24,9 +24,17 @@ My sinatra seed app.
 
 ### Development
 
+* Run `rake db:migrate` to setup the development database
 * Run `shotgun config.ru` to start local server
 * Run `gulp` (in a separate terminal) to begin auto compiling assets
 * Run `gulp serve` (in another separate terminal) to start BrowserSync
+
+### Adding Models
+
+* Run `rake db:create_migration NAME=create_####` (where #### is the name of the model) to create the database schema
+* Run `rake db:migrate` to add to table to the database
+
+For more tasks, run `rake -T` to setup the development database
 
 ### Deployment
 
