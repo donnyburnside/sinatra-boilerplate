@@ -24,7 +24,7 @@ My sinatra seed app.
 
 ### Development
 
-* Run `shotgun app.rb` to start local server
+* Run `shotgun config.ru` to start local server
 * Run `gulp` (in a separate terminal) to begin auto compiling assets
 * Run `gulp serve` (in another separate terminal) to start BrowserSync
 
