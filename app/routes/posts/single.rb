@@ -1,4 +1,4 @@
 get '/post/:id' do
   @post = Post.find(params[:id])
-  haml :"post/single", :layout => :layout
+  haml :"posts/single", :layout => :layout
 end
