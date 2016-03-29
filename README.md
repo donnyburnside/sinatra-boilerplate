@@ -31,7 +31,7 @@ My sinatra seed app.
 
 ### Adding Models
 
-* Run `rake db:create_migration NAME=create_####` (where #### is the name of the model) to create the database schema
+* Run `rake db:create_migration NAME=create_####` (where #### is the name of the model) to setup database migrations
 * Run `rake db:migrate` to add to table to the database
 
 For more tasks, run `rake -T` to setup the development database
@@ -40,6 +40,7 @@ For more tasks, run `rake -T` to setup the development database
 
 * Create a Heroku instance
 * Deploy!
+* Run `heroku run rake db:migrate` to setup database migrations
 
 ### Project Structure
 
