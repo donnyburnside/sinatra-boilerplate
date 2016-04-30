@@ -73,7 +73,7 @@ gulp.task('js', function(){
 // BrowserSync
 //
 
-gulp.task('serve', ['js'], function () {
+gulp.task('server', ['js'], function () {
 
   // Serve files via Hugo
   browserSync.init({
@@ -99,7 +99,7 @@ gulp.task('serve', ['js'], function () {
 // Watch
 //
 
-gulp.task('watch', function() {
+gulp.task('watcher', function() {
 
   gulp.watch('src/css/**/*.css', ['css']);
   gulp.watch('src/js/*.js', ['js']);
@@ -121,5 +121,6 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 //
 
 gulp.task('default', sequence('css', 'js'));
-gulp.task('watch', sequence('css', 'js', 'watch'));
+gulp.task('watch', sequence('css', 'js', 'watcher'));
+gulp.task('serve', sequence('css', 'js', 'watcher', 'server'));
 gulp.task('deploy', sequence('css', 'js'));
