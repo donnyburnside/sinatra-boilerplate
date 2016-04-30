@@ -7,6 +7,7 @@ var gulp            = require('gulp'),
     jshint          = require('gulp-jshint'),
     notify          = require('gulp-notify'),
     plumber         = require('gulp-plumber'),
+    sequence        = require('gulp-sequence'),
     uglify          = require('gulp-uglify'),
     sourcemaps      = require('gulp-sourcemaps'),
     browserSync     = require('browser-sync').create();
@@ -18,8 +19,9 @@ var gulp            = require('gulp'),
 var postcss         = require('gulp-postcss'),
     advancedvars    = require('postcss-advanced-variables'),
     autoprefixer    = require('autoprefixer'),
+    color           = require('postcss-color-function'),
+    conditionals    = require('postcss-conditionals'),
     csswring        = require('csswring'),
-    conditionals    = require('postcss-conditionals')
     extend          = require('postcss-extend'),
     mathjs          = require('postcss-mathjs'),
     mixins          = require('postcss-mixins'),
@@ -39,6 +41,7 @@ gulp.task('css', function(){
     nested,
     conditionals,
     mathjs,
+    color,
     autoprefixer({ browsers: ['last 2 versions', '> 5%'] }),
     csswring
   ];
@@ -67,12 +70,6 @@ gulp.task('js', function(){
 });
 
 //
-// Ensure JS concatenation tasks are complete before reloading
-//
-
-gulp.task('js-watch', ['js'], browserSync.reload);
-
-//
 // BrowserSync
 //
 
@@ -80,7 +77,7 @@ gulp.task('serve', ['js'], function () {
 
   // Serve files via Hugo
   browserSync.init({
-    proxy: "localhost:9393",
+    proxy: "localhost:9292",
     ghostMode: {
       clicks: true,
       scroll: true,
@@ -123,4 +120,6 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 // Default Gulp Task
 //
 
-gulp.task('default', ['css', 'js', 'watch']);
+gulp.task('default', sequence('css', 'js'));
+gulp.task('watch', sequence('css', 'js', 'watch'));
+gulp.task('deploy', sequence('css', 'js'));
