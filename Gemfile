@@ -1,25 +1,21 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
 # Ruby Version
-ruby '2.2.4'
+ruby "2.3.0"
 
-gem 'sinatra', '1.4.6'
-gem 'activerecord', '4.2.5'
-gem 'sinatra-activerecord', '2.0.9'
-gem 'puma', '2.15.3'
-gem 'sinatra-contrib', '1.4.6'
-gem 'rake', '10.4.2'
-gem 'sinatra-flash', '0.3.0'
-gem 'haml'
+gem "sinatra", "1.4.7"
+gem "sinatra-activerecord", "2.0.9"
+gem "activerecord", "4.2.5"
+gem "haml", "4.0.7"
+gem "rake", "11.1.2"
+gem "shotgun", "0.9.1"
+gem "thin", "1.6.4"
 
 group :development do
-  gem 'shotgun', '0.9.1'
-  gem 'tux', '0.3.0'
-  gem 'mocha', '1.1.0'
-  gem 'foreman', '0.78.0'
-  gem 'sqlite3', '1.3.11'
+  gem "sqlite3", "1.3.11"
+  gem "tux", "0.3.0"
 end
 
 group :production do
-  gem 'pg'
+  gem "pg"
 end

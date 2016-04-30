@@ -1,1 +1,1 @@
-web: rackup config.ru -s Puma -p $PORT
+web: bundle exec rackup config.ru -p $PORT -s thin
