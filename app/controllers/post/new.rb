@@ -7,6 +7,6 @@ post "/post/new" do
   if @post.save
     redirect "/post/#{@post.id}"
   else
-    haml :"post/new", :layout => :layout
+    haml :"post/index", :layout => :layout
   end
 end
