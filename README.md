@@ -18,7 +18,7 @@ My sinatra seed app.
 * Clone the project onto your machine
 * Run `bundle install --without production` to install Ruby gems
 * Run `npm install` to install npm dependencies
-* Run `rake db:migrate` to setup the development database
+* Run `rake db:setup` to setup the development database
 
 ## Development
 
