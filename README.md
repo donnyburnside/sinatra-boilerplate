@@ -30,7 +30,7 @@ My sinatra seed app.
 ## Adding Models
 
 * Run `rake db:create_migration NAME=create_####` (where #### is the name of the model) to setup database migrations
-* Run `rake db:migrate` to add to table to the database
+* Run `rake db::setup` to add to table to the database
 
 For more tasks, run `rake -T` to setup the development database
 
