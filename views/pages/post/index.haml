@@ -1,7 +1,8 @@
-%div{:class => "posts"}
-  - @posts.each do |post|
-    %div{:class => "post"}
-      %h1
-        %a{:href => "/post/#{post.id}"}
-          = post.title
-      %div= post.content
+%h1 Posts
+- @posts.each do |post|
+  %h2
+    %a{:href => "/post/#{post.id}"}
+      = post.title
+  %div= post.updated_at
+  %div= post.content
+  %hr
