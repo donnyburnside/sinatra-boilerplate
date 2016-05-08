@@ -1,0 +1,10 @@
+%h1 Users
+- @users.each do |user|
+  %h2
+    %a{:href => "/user/#{user.id}"}
+      = user.username
+  %div= user.email
+  %div= user.password
+  %div= user.role_id
+  %div= user.updated_at
+  %hr
