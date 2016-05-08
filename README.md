@@ -18,7 +18,8 @@ My sinatra seed app.
 * Clone the project onto your machine
 * Run `bundle install --without production` to install Ruby gems
 * Run `npm install` to install npm dependencies
-* Run `rake db:setup` to setup the development database
+* Run `rake db:migrate` to ensure database migrations are up to date
+* Run `rake db:setup` to populate the development database
 
 ## Development
 
@@ -30,7 +31,7 @@ My sinatra seed app.
 ## Adding Models
 
 * Run `rake db:create_migration NAME=create_####` (where #### is the name of the model) to setup database migrations
-* Run `rake db::setup` to add to table to the database
+* Run `rake db::migrate` to add to table to the database
 
 For more tasks, run `rake -T` to setup the development database
 
@@ -38,7 +39,8 @@ For more tasks, run `rake -T` to setup the development database
 
 * Create a Heroku instance
 * Deploy!
-* Run `heroku run rake db:migrate` to setup database migrations
+* Run `rake db:migrate` to ensure database migrations are up to date
+* Run `rake db:setup` to populate the production database
 
 ## Project Structure
 
