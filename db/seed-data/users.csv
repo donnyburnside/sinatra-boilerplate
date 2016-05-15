@@ -1,0 +1,6 @@
+id,username,password_digest,role_id,created_at,updated_at
+2,Manager,$2a$04$y7pbIFrDy4ENlHnLa1rq6e3VmfIzl0d9uANlvaVwO15WJvmlybTAe,2,01/01/16 12:00,01/01/16 12:00
+3,Editor,$2a$04$qeDRGwadm6MVIL./kJaz5OBagsYZltGnm.hE4XmvWDiHrcAOt.S7W,3,01/01/16 12:00,01/01/16 12:00
+4,Author,$2a$04$F3EU1p1rlnpqw0Ax//S9XedOkhJFcN4uiHNBpecBe4FVQ5yG1bfGy,4,01/01/16 12:00,01/01/16 12:00
+5,VIP,$2a$04$PNnkkmP3YxiuDINAhQpJteDPY72iwaPJ2t7spifuIn1vTYchUPihm,5,01/01/16 12:00,01/01/16 12:00
+6,Member,$2a$04$AY0oq7vXhuLXLBh3VTNqYee0dVj59co3oUs7OGPmR7m4IGsrlaCyS,6,01/01/16 12:00,01/01/16 12:00
