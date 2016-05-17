@@ -3,22 +3,25 @@
     %li{:class => "menu__item"}
       %a{:class => "menu__link", :href => "/"}
         Home
-    %li{:class => "menu__item"}
-      %a{:class => "menu__link", :href => "/users"}
-        Users
-      %ul{:class => "menu__dropdown"}
-        %li{:class => "menu__item"}
-          %a{:class => "menu__link", :href => "/users/new"}
-            New User
-    %li{:class => "menu__item"}
-      %a{:class => "menu__link", :href => "/dashboard"}
-        Dashboard
-    %li{:class => "menu__item"}
-      %a{:class => "menu__link", :href => "/admin"}
-        Admin
-    %li{:class => "menu__item"}
-      %a{:class => "menu__link", :href => "/login"}
-        Login
-    %li{:class => "menu__item"}
-      %a{:class => "menu__link", :href => "/logout"}
-        Logout
+
+    - if is_logged_in
+      %li{:class => "menu__item"}
+        %a{:class => "menu__link", :href => "/admin"}
+          Admin
+        %ul{:class => "menu__dropdown"}
+          %li{:class => "menu__item"}
+            %a{:class => "menu__link", :href => "/users"}
+              Users
+            %ul{:class => "menu__dropdown"}
+              %li{:class => "menu__item"}
+                %a{:class => "menu__link", :href => "/users/new"}
+                  New User
+
+    - if current_user.nil?
+      %li{:class => "menu__item"}
+        %a{:class => "menu__link", :href => "/login"}
+          Login
+    - else
+      %li{:class => "menu__item"}
+        %a{:class => "menu__link", :href => "/logout"}
+          Logout

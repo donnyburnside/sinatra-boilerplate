@@ -1,8 +1,8 @@
 %h1 Login
-%form{:class => ""}
+%form{:class => "", :method => "post", :action => "/login"}
   %div{:class => ""}
-    %label{class: "", for: ""} Email Address
-    %input{:class => "", :id => "", :name => "user[email]", :type => "email", :placeholder => "you@domain.tld", :autofocus => "autofocus"}
+    %label{class: "", for: ""} Username
+    %input{:class => "", :id => "", :name => "user[username]", :type => "text", :placeholder => "Username", :autofocus => "autofocus"}
   %div{:class => ""}
     %label{class: "", for: ""} Password
     %input{:class => "", :id => "", :name => "user[password]", :type => "password", :placeholder => "Password"}

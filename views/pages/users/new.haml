@@ -1,13 +1,13 @@
 %h1 Create User
 %form{:class => "", :method => "post", :action => "/users/new"}
   %div{:class => ""}
-    %label{class: "", for: ""} Name
-    %input{:class => "", :id => "", :name => "user[username]", :type => "text", :placeholder => "Username", :autofocus => "autofocus"}
-  %div{:class => ""}
-    %label{class: "", for: ""} Email Address
-    %input{:class => "", :id => "", :name => "user[email]", :type => "email", :placeholder => "you@domain.tld"}
+    %label{class: "", for: ""} Username
+    %input{:class => "", :id => "", :name => "user[username]", :type => "text", :placeholder => "Username"}
   %div{:class => ""}
     %label{class: "", for: ""} Password
     %input{:class => "", :id => "", :name => "user[password]", :type => "password", :placeholder => "Password"}
+  %div{:class => ""}
+    %label{class: "", for: ""} Password (confirmation)
+    %input{:class => "", :id => "", :name => "user[password_confirmation]", :type => "password", :placeholder => "Password"}
   %div{:class => ""}
     %button{class: "button"} Save
