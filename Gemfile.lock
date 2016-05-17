@@ -15,6 +15,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    bcrypt (3.1.11)
     bond (0.5.1)
     builder (3.2.2)
     daemons (1.2.3)
@@ -54,7 +55,7 @@ GEM
       eventmachine (~> 1.0, >= 1.0.4)
       rack (~> 1.0)
     thread_safe (0.3.5)
-    tilt (2.0.2)
+    tilt (2.0.3)
     tux (0.3.0)
       ripl (>= 0.3.5)
       ripl-multi_line (>= 0.2.4)
@@ -68,6 +69,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 4.2.5)
+  bcrypt (= 3.1.11)
   haml (= 4.0.7)
   pg
   rake (= 11.1.2)
@@ -78,5 +80,8 @@ DEPENDENCIES
   thin (= 1.6.4)
   tux (= 0.3.0)
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.3
