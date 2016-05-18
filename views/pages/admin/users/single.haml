@@ -1,0 +1,16 @@
+%div{:class => ""}
+  %h1= @user.username
+  %div{:class => ""}
+    %strong ID:
+    = @user.id
+  %div{:class => ""}
+    %strong Role ID:
+    = @user.role_id
+  %div{:class => ""}
+    %strong Last Updated On:
+    = @user.updated_at
+  %div{:class => ""}
+    %a{:class => "", :href => "/admin/user/#{@user.id}/edit", :role => "button"}
+      Edit User
+    %a{:class => "", :href => "/admin/user/#{@user.id}/delete", :role => "button"}
+      Delete User

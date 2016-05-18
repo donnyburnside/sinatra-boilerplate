@@ -10,11 +10,11 @@
           Admin
         %ul{:class => "menu__dropdown"}
           %li{:class => "menu__item"}
-            %a{:class => "menu__link", :href => "/users"}
+            %a{:class => "menu__link", :href => "/admin/users"}
               Users
             %ul{:class => "menu__dropdown"}
               %li{:class => "menu__item"}
-                %a{:class => "menu__link", :href => "/users/new"}
+                %a{:class => "menu__link", :href => "/admin/users/new"}
                   New User
 
     - if current_user.nil?

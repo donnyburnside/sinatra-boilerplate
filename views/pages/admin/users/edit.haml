@@ -1,0 +1,24 @@
+%div{:class => ""}
+  %h1
+    Edit User:
+    = @user.username
+  %form{:class => "", :method => "post", :action => "/admin/user/#{@user.id}"}
+    %div{:class => ""}
+      %strong ID:
+      = @user.id
+    %div{:class => ""}
+      %label{class: "", for: ""}  Username:
+      %input{:class => "", :id => "", :name => "user[username]", :type => "text", :placeholder => "Username", :value => "#{@user.username}"}
+    %div{:class => ""}
+      %label{class: "", for: ""} New Password
+      %input{:class => "", :id => "", :name => "user[password]", :type => "text", :placeholder => "Password"}
+    %div{:class => ""}
+      %label{class: "", for: ""} New Password (confirmation)
+      %input{:class => "", :id => "", :name => "user[password_confirmation]", :type => "password", :placeholder => "Password"}
+    %div{:class => ""}
+      %label{class: "", for: ""}  Role ID:
+      %input{:class => "", :id => "", :name => "user[role_id]", :type => "text", :placeholder => "Role", :value => "#{@user.role_id}"}
+    %div{:class => ""}
+      %input{:type => "hidden", :name => "_method", :value => "put"}
+      %button{:class => "", :type => "submit"}
+        Save User

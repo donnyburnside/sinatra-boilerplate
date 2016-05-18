@@ -1,4 +1,4 @@
-get "/users" do
+get "/admin/users" do
 
   if is_logged_in
     # Get all users
@@ -6,7 +6,7 @@ get "/users" do
     halt 404 if @users == nil
 
     # Get view
-    haml :"users/index", :layout => :layout
+    haml :"admin/users/index", :layout => :layout
   else
     redirect "/"
   end
