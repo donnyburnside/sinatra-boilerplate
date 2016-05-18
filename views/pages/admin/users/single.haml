@@ -12,5 +12,6 @@
   %div{:class => ""}
     %a{:class => "", :href => "/admin/user/#{@user.id}/edit", :role => "button"}
       Edit User
-    %a{:class => "", :href => "/admin/user/#{@user.id}/delete", :role => "button"}
-      Delete User
+    %form{:class => "", :method => "post", :action => "/admin/user/#{@user.id}"}
+      %input{:type => "hidden", :name => "_method", :value => "delete"}
+      %button{class: "button"} Delete User

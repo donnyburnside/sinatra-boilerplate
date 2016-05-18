@@ -11,5 +11,6 @@ end
 put "/admin/user/:id" do |id|
   user = User.find(params[:id])
   user.update(params[:user])
-  redirect "/admin/user/#{user.id}"
+  # redirect "/admin/user/#{user.id}"
+  redirect "/admin/users"
 end

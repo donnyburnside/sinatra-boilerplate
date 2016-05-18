@@ -11,7 +11,7 @@
       %input{:class => "", :id => "", :name => "user[username]", :type => "text", :placeholder => "Username", :value => "#{@user.username}"}
     %div{:class => ""}
       %label{class: "", for: ""} New Password
-      %input{:class => "", :id => "", :name => "user[password]", :type => "text", :placeholder => "Password"}
+      %input{:class => "", :id => "", :name => "user[password]", :type => "password", :placeholder => "Password"}
     %div{:class => ""}
       %label{class: "", for: ""} New Password (confirmation)
       %input{:class => "", :id => "", :name => "user[password_confirmation]", :type => "password", :placeholder => "Password"}
@@ -22,3 +22,6 @@
       %input{:type => "hidden", :name => "_method", :value => "put"}
       %button{:class => "", :type => "submit"}
         Save User
+  %form{:class => "", :method => "post", :action => "/admin/user/#{@user.id}"}
+    %input{:type => "hidden", :name => "_method", :value => "delete"}
+    %button{class: "button"} Delete User

@@ -10,5 +10,5 @@ end
 
 post "/admin/users/new" do
   user = User.create(params[:user])
-  redirect "/admin/user/#{user.id}"
+  redirect "/admin/users"
 end
