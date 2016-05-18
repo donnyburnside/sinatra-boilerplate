@@ -1,4 +1,4 @@
-delete "/users/:id" do |id|
+delete "/user/:id" do |id|
 
   # Get and destroy user
   user = User.find_by(:id => id.to_i).destroy
