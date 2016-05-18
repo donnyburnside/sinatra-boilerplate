@@ -1,5 +1,9 @@
 get "/login" do
-  haml :"login", :layout => :layout
+  if is_logged_in
+    redirect "/admin"
+  else
+    haml :"login", :layout => :layout
+  end
 end
 
 post "/login" do

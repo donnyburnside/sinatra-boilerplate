@@ -1,4 +1,8 @@
 get "/logout" do
-  session[:user_id] = nil
-  redirect "/"
+  if is_logged_in
+    session[:user_id] = nil
+    redirect "/"
+  else
+    redirect "/"
+  end
 end
